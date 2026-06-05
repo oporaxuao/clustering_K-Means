@@ -1,78 +1,80 @@
-# 🛍️ Customer Segmentation with K-Means Clustering
+# 🛍️ Segmentação de Clientes com Clusterização K-Means
 
-Unsupervised machine learning project to identify distinct customer profiles and enable personalized marketing strategies based on behavioral and financial data.
-
----
-
-## 🎯 Business Objective
-
-Retail and e-commerce teams often treat their entire customer base as a single audience, resulting in low ROI on marketing campaigns. This project solves that problem by grouping customers into homogeneous segments, allowing the business to tailor communication, offers, and retention strategies to each profile.
+Projeto de machine learning não supervisionado para identificar perfis distintos de clientes e viabilizar estratégias de marketing personalizadas com base em dados comportamentais e financeiros.
 
 ---
 
-## 🗂️ Methodology
+## 🎯 Objetivo de Negócio
 
-### 1. Exploratory Data Analysis (EDA)
-- Analyzed the distribution of income and spending score across the customer base
-- Identified correlations between demographic variables and purchasing behavior
-
-### 2. Data Preprocessing
-- Normalized features using `StandardScaler` to prevent scale bias in the distance-based algorithm
-- Selected the most discriminating variables for clustering: **Annual Income** and **Spending Score**
-
-### 3. Optimal Number of Clusters
-Two complementary techniques were applied to define the ideal number of groups:
-- **Elbow Method**: Identified the point of diminishing returns on inertia reduction
-- **Silhouette Score**: Validated cluster cohesion; the final model with **5 clusters** achieved a score of **0.272**
-
-### 4. K-Means Model
-- Trained a K-Means model with `k=5`
-- Mapped cluster centers to business personas for strategic interpretation
+Equipes de varejo e e-commerce frequentemente tratam toda a base de clientes como um único público, resultando em baixo ROI nas campanhas de marketing. Este projeto resolve esse problema agrupando os clientes em segmentos homogêneos, permitindo que o negócio adapte a comunicação, as ofertas e as estratégias de retenção a cada perfil.
 
 ---
 
-## 📊 Results — The 5 Customer Personas
+## 🗂️ Metodologia
 
-| Cluster | Profile | Strategy |
+### 1. Análise Exploratória de Dados (EDA)
+- Análise da distribuição de renda e spending score na base de clientes
+- Identificação de correlações entre variáveis demográficas e comportamento de compra
+
+### 2. Pré-processamento de Dados
+- Normalização das features com `StandardScaler` para evitar viés de escala no algoritmo baseado em distância
+- Seleção das variáveis mais discriminantes para a clusterização: **Renda Anual** e **Spending Score**
+
+### 3. Número Ótimo de Clusters
+Duas técnicas complementares foram aplicadas para definir o número ideal de grupos:
+
+- **Método do Cotovelo (Elbow Method)**: Identificou o ponto de retornos decrescentes na redução da inércia
+- **Silhouette Score**: Validou a coesão dos clusters; o modelo final com **5 clusters** atingiu um score de **0.272**
+
+### 4. Modelo K-Means
+- Treinamento de um modelo K-Means com `k=5`
+- Mapeamento dos centros dos clusters para personas de negócio, permitindo interpretação estratégica
+
+---
+
+## 📊 Resultados — As 5 Personas de Clientes
+
+| Cluster | Perfil | Estratégia |
 |---|---|---|
-| 0 — Stable | Older customers, stable income, moderate spending | Loyalty programs |
-| 1 — Savers | High income, low spending frequency | Exclusivity and premium campaigns |
-| 2 — Engaged | Young, mid-income, high purchase volume | Events and experiences |
-| 3 — Premium | High income and high recurring spending | VIP services and networking |
-| 4 — Trend-driven | Young, lower income, shopping-oriented | Discounts and trend content |
+| 0 — Estáveis | Clientes mais velhos, renda estável, gasto moderado | Programas de fidelidade |
+| 1 — Poupadores | Renda alta, baixa frequência de gasto | Campanhas de exclusividade e premium |
+| 2 — Engajados | Jovens, renda média, alto volume de compra | Eventos e experiências |
+| 3 — Premium | Renda alta e gasto recorrente elevado | Serviços VIP e networking |
+| 4 — Antenados | Jovens, renda mais baixa, orientados a compras | Descontos e conteúdo de tendências |
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Stack Técnica
 
-| Category | Tools |
+| Categoria | Ferramentas |
 |---|---|
-| Language | Python |
-| Data Manipulation | Pandas, NumPy |
-| Visualization | Matplotlib, Seaborn |
+| Linguagem | Python |
+| Manipulação de Dados | Pandas, NumPy |
+| Visualização | Matplotlib, Seaborn |
 | Machine Learning | Scikit-learn (K-Means, StandardScaler, Silhouette Score) |
-| Environment | Jupyter Notebook |
+| Ambiente | Jupyter Notebook |
 
 ---
 
-## ▶️ How to Run
+## ▶️ Como Executar
 
 ```bash
-# Clone the repository
+# Clone o repositório
 git clone https://github.com/oporaxuao/customer-segmentation-kmeans.git
 cd customer-segmentation-kmeans
 
-# Install dependencies
+# Instale as dependências
 pip install pandas numpy matplotlib seaborn scikit-learn jupyter
 
-# Launch the notebook
+# Inicie o notebook
 jupyter notebook
 ```
 
 ---
 
-## 👤 Author
+## 👤 Autor
 
 **João Alfredo de Sousa Siqueira**
+
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-oporaxuao-blue)](https://linkedin.com/in/oporaxuao)
 [![GitHub](https://img.shields.io/badge/GitHub-oporaxuao-black)](https://github.com/oporaxuao)
